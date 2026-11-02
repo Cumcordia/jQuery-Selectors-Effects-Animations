@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container">
+    <div class="d-flex gap-2">
+      <button id="btn-light" class="btn btn-light btn-sm">Light theme</button>
+      <button id="btn-dark" class="btn btn-dark btn-sm">Dark theme</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="profile">
+    <h1 class="display-5 fw-bold" id="name">Alikhan</h1>
+    <p class="fs-4 text-primary" id="headline">Software Developer</p>
+    <p class="col-md-9 intro" id="greeting">Greeting</p>
+    <button id="btn-greeting" class="btn btn-primary">Change greeting</button>
+  </div>
+
+  <div class="card mb-4" id="about">
+    <div class="card-header">Task 2</div>
+    <div class="card-body">
+      <h3 class="card-title h5">About Me</h3>
+      <p>Example description</p>
+      <p id="status" class="text-success fw-bold">Currently learning jQuery!</p>
+      <ul id="fun-facts" class="list-group mb-3">
+        <li class="list-group-item">I enjoy learning programming</li>
+        <li class="list-group-item">I like solving algorithmic problems</li>
+      </ul>
+      <button id="btn-hide" class="btn btn-danger">Hide</button>
+      <button id="btn-show" class="btn btn-success">Show</button>
+      <button id="btn-toggle" class="btn btn-secondary">Toggle</button>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="gallery-section">
+    <div class="card-header">Task 3</div>
+    <div class="card-body">
+      <div class="mb-3">
+        <button id="btn-fadeout" class="btn btn-outline-danger">Fade out</button>
+        <button id="btn-fadein" class="btn btn-outline-success">Fade in</button>
+        <button id="btn-fadetoggle" class="btn btn-outline-secondary">Fade toggle</button>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <img class="gallery-img img-thumbnail" width="200" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P9NiruM4qUZmpH-Hnyl31gDc2mts429qxU2IkTBWJg&s=10' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23ffc107'/%3E%3Ccircle cx='150' cy='40' r='20' fill='%23fff3cd'/%3E%3Cpath d='M0 140 L60 50 L110 110 L150 70 L200 140Z' fill='%23198754'/%3E%3C/svg%3E">
+        <img class="gallery-img img-thumbnail" width="200" height="140" src="https://avatars.githubusercontent.com/u/70142?s=280&v=4' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23212529'/%3E%3Crect x='14' y='16' width='172' height='108' rx='6' fill='%23343a40'/%3E%3Crect x='26' y='34' width='70' height='8' fill='%230d6efd'/%3E%3Crect x='38' y='54' width='110' height='8' fill='%23198754'/%3E%3Crect x='38' y='74' width='80' height='8' fill='%23f8f9fa'/%3E%3Crect x='26' y='94' width='50' height='8' fill='%23ffc107'/%3E%3C/svg%3E">
+        <img class="gallery-img img-thumbnail" width="200" height="140" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23cff4fc'/%3E%3Crect x='20' y='60' width='30' height='80' fill='%23212529'/%3E%3Crect x='58' y='30' width='36' height='110' fill='%230d6efd'/%3E%3Crect x='102' y='72' width='28' height='68' fill='%23212529'/%3E%3Crect x='138' y='46' width='40' height='94' fill='%23dc3545'/%3E%3C/svg%3E">
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="favorites">
+    <div class="card-header">Task 4</div>
+    <div class="card-body">
+      <button class="panel-head btn btn-outline-primary w-100 text-start mb-1" aria-expanded="false">My Favorite Music</button>
+      <div class="panel border rounded p-3 mb-2" style="display:none">Music example</div>
+
+      <button class="panel-head btn btn-outline-primary w-100 text-start mb-1" aria-expanded="false">My Favorite Movie</button>
+      <div class="panel border rounded p-3 mb-2" style="display:none">Movies example</div>
+
+      <button class="panel-head btn btn-outline-primary w-100 text-start mb-1" aria-expanded="false">My Favorite Subject</button>
+      <div class="panel border rounded p-3 mb-3" style="display:none">Subject example</div>
+
+      <button id="btn-slideup" class="btn btn-warning">Slide up all</button>
+      <button id="btn-slidedown" class="btn btn-info">Slide down all</button>
+      <button id="btn-slidetoggle" class="btn btn-secondary">Slide toggle all</button>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="skills">
+    <div class="card-header">Task 5</div>
+    <div class="card-body">
+      <ul id="skills-list" class="list-group mb-3">
+        <li class="list-group-item">Go</li>
+        <li class="list-group-item">HTML &amp; CSS</li>
+        <li class="list-group-item">JavaScript</li>
+      </ul>
+      <label for="skill-input" class="form-label">New skill</label>
+      <input type="text" id="skill-input" class="form-control mb-2" placeholder="e.g. SQL">
+      <div id="skill-msg" class="text-danger mb-2" role="alert"></div>
+      <button id="btn-add" class="btn btn-success">Add Skill</button>
+      <button id="btn-prepend" class="btn btn-primary">Prepend Skill</button>
+      <button id="btn-remove" class="btn btn-danger">Remove Skill</button>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="links">
+    <div class="card-header">Task 6</div>
+    <div class="card-body">
+      <p><a id="social-link" href="https://github.com/Cumcordia" target="_blank" rel="noopener">My GitHub</a></p>
+      <button id="btn-link" class="btn btn-primary">Change link to LinkedIn</button>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="form-section">
+    <div class="card-header">Task 7</div>
+    <div class="card-body">
+      <form id="contact-form" onsubmit="return false;">
+        <div class="mb-3">
+          <label for="name-input" class="form-label">Name</label>
+          <input type="text" id="name-input" class="form-control" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="mb-3">
+          <label for="email-input" class="form-label">Email</label>
+          <input type="email" id="email-input" class="form-control" placeholder="you@example.com" autocomplete="email">
+        </div>
+      </form>
+      <div id="live-output" class="alert alert-secondary mb-0">
+        <div>Name: <strong id="out-name"></strong></div>
+        <div>Email: <strong id="out-email"></strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-4" id="skill-bars-section">
+    <div class="card-header">Task 8</div>
+    <div class="card-body">
+      <div class="mb-3">
+        <div class="d-flex justify-content-between"><span>JavaScript</span><span>50%</span></div>
+        <div class="progress" style="height:20px"><div class="progress-bar bar-fill bg-warning" style="width:0" data-level="50"></div></div>
+      </div>
+      <div class="mb-3">
+        <div class="d-flex justify-content-between"><span>Go</span><span>90%</span></div>
+        <div class="progress" style="height:20px"><div class="progress-bar bar-fill bg-info" style="width:0" data-level="90"></div></div>
+      </div>
+      <div class="mb-3">
+        <div class="d-flex justify-content-between"><span>HTML &amp; CSS</span><span>90%</span></div>
+        <div class="progress" style="height:20px"><div class="progress-bar bar-fill bg-success" style="width:0" data-level="90"></div></div>
+      </div>
+      <button id="btn-animate" class="btn btn-primary">Animate My Skills</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
